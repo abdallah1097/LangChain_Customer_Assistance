@@ -1,5 +1,8 @@
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+
+import logging
+logging.captureWarnings(True) # Ignore all warnings
 
 # Langchain libraries for building the retrieval-based QA pipeline
 from langchain import HuggingFaceHub  # Access pre-trained models from Hugging Face Hub
@@ -15,7 +18,7 @@ class CustomerAssistanceAgent():
     def __init__(self):
         # Define Parameters
         self.repo_id = "google/flan-t5-large"
-        self.model_kwargs = {"temperature": 0, "max_length": 64}
+        self.model_kwargs = {"temperature": 0.7, "max_new_tokens": 250, "top_k":50, "repetition_penalty":1.03}
         self.data_path = './data/menu.txt'
         self.chunk_size = 1000
         self.chunk_overlap = 0
@@ -61,7 +64,7 @@ class CustomerAssistanceAgent():
         retriever = new_db.as_retriever()
 
         # Build the RetrievalQA pipeline
-        qa_stuff = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, verbose=True)
+        qa_stuff = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, verbose=False)
         return qa_stuff
 
     def get_answer_format(self):
