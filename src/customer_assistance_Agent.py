@@ -76,9 +76,9 @@ class CustomerAssistanceAgent():
         Returns:
             str: The formatted template string.
         """
-        template = """Question: {question}
-        Answer for the given documents.
+        template = """
+        Question: {question}
+        Answer for the given documents: 
+            {answer}"""
 
-        Answer: """
-
-        return template.format(question="{question}")
+        return template.format(question="{question}", answer="{answer}")
