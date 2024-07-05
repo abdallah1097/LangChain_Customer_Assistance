@@ -11,7 +11,10 @@ conda activate customer_assistance
 pip install -r requirements.txt
 ```
 
+# Use
 Run the main app:
 ```
 python app.py
 ```
+
+It will ask you for questions to assist you with.
