@@ -1,5 +1,4 @@
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 # Langchain libraries for building the retrieval-based QA pipeline
 from langchain import HuggingFaceHub  # Access pre-trained models from Hugging Face Hub
@@ -9,14 +8,15 @@ from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate emb
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
 from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
 
-from transformers import pipeline  # Load pre-trained models for text generation from Transformers library
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+
 
 class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
     def __init__(self):
         # Define Parameters
         self.repo_id = "google/flan-t5-large"
-        self.model_kwargs = {"temperature":0, "max_length":64}
+        self.model_kwargs = {"temperature": 0, "max_length": 64}
         self.data_path = './data/demo.txt'
         self.chunk_size = 1000
         self.chunk_overlap = 0
@@ -69,8 +69,8 @@ class CustomerAssistanceAgent():
         """
         Generates a formatted string template for presenting the user's question and the answer.
 
-        This function constructs a template string with placeholders for the question (`{question}`) 
-        and the answer (`{answer}`). This template is then used to format the response returned 
+        This function constructs a template string with placeholders for the question (`{question}`)
+        and the answer (`{answer}`). This template is then used to format the response returned
         by the retrieval-based QA pipeline.
 
         Returns:
@@ -78,7 +78,7 @@ class CustomerAssistanceAgent():
         """
         template = """
         Question: {question}
-        Answer for the given documents: 
+        Answer for the given documents:
             {answer}"""
 
         return template.format(question="{question}", answer="{answer}")
