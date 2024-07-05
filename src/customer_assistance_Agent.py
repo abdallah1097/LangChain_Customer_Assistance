@@ -22,9 +22,18 @@ class CustomerAssistanceAgent():
         self.db_path = "faiss_index"
 
         # Loads entire pipline
-        self.load_pipline()
-    
+        self.pipline = self.load_pipline()
+
+        # Get answer format
+        self.prompt = self.get_answer_format()
+
     def load_pipline(self):
+        """
+        Loads and builds the retrieval-based question answering pipeline.
+
+        Returns:
+            RetrievalQA: The constructed retrieval-based question answering pipeline.
+        """
         # Load the Large Language Model (LLM)
         llm = HuggingFaceHub(repo_id=self.repo_id, model_kwargs=self.model_kwargs)
 
@@ -54,3 +63,21 @@ class CustomerAssistanceAgent():
         # Build the RetrievalQA pipeline
         qa_stuff = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, verbose=True)
         return qa_stuff
+
+    def get_answer_format(self):
+        """
+        Generates a formatted string template for presenting the user's question and the answer.
+
+        This function constructs a template string with placeholders for the question (`{question}`) 
+        and the answer (`{answer}`). This template is then used to format the response returned 
+        by the retrieval-based QA pipeline.
+
+        Returns:
+            str: The formatted template string.
+        """
+        template = """Question: {question}
+        Answer for the given documents.
+
+        Answer: """
+
+        return template.format(question="{question}")
