@@ -1,0 +1,102 @@
+Restaurant Name: Gourmet Delights
+
+Categories: 
+- Starters
+- Main Courses
+- Desserts
+- Beverages
+
+Dietary Options:
+- Vegetarian
+- Vegan
+- Gluten-Free
+- Keto
+- Paleo
+- Low-Carb
+
+Starters:
+1. Garden Salad
+   - Description: Fresh mixed greens, cherry tomatoes, cucumbers, and a light vinaigrette dressing.
+   - Dietary Options: Vegetarian, Vegan, Gluten-Free
+   - Calories: 150 kcal
+   - Carbohydrates: 10g
+   - Proteins: 3g
+   - Fats: 10g
+
+2. Chicken Caesar Salad
+   - Description: Grilled chicken breast, romaine lettuce, croutons, and Caesar dressing.
+   - Dietary Options: Gluten-Free (without croutons)
+   - Calories: 350 kcal
+   - Carbohydrates: 12g
+   - Proteins: 30g
+   - Fats: 20g
+
+Main Courses:
+1. Grilled Salmon
+   - Description: Freshly grilled salmon served with quinoa and steamed vegetables.
+   - Dietary Options: Gluten-Free, Keto, Paleo, Low-Carb
+   - Calories: 500 kcal
+   - Carbohydrates: 20g
+   - Proteins: 40g
+   - Fats: 25g
+
+2. Vegan Buddha Bowl
+   - Description: A nutritious bowl of brown rice, chickpeas, avocado, roasted vegetables, and tahini sauce.
+   - Dietary Options: Vegan, Gluten-Free
+   - Calories: 600 kcal
+   - Carbohydrates: 70g
+   - Proteins: 20g
+   - Fats: 20g
+
+3. Classic Cheeseburger
+   - Description: Juicy beef patty with cheddar cheese, lettuce, tomato, and special sauce on a sesame bun.
+   - Dietary Options: Keto (without bun)
+   - Calories: 800 kcal
+   - Carbohydrates: 50g
+   - Proteins: 40g
+   - Fats: 45g
+
+Desserts:
+1. Chocolate Lava Cake
+   - Description: Rich chocolate cake with a gooey molten center, served with vanilla ice cream.
+   - Dietary Options: Vegetarian
+   - Calories: 450 kcal
+   - Carbohydrates: 60g
+   - Proteins: 5g
+   - Fats: 20g
+
+2. Fresh Fruit Platter
+   - Description: A selection of seasonal fruits.
+   - Dietary Options: Vegan, Gluten-Free
+   - Calories: 200 kcal
+   - Carbohydrates: 50g
+   - Proteins: 2g
+   - Fats: 1g
+
+Beverages:
+1. Green Smoothie
+   - Description: A blend of spinach, kale, apple, and banana.
+   - Dietary Options: Vegan, Gluten-Free
+   - Calories: 180 kcal
+   - Carbohydrates: 35g
+   - Proteins: 3g
+   - Fats: 2g
+
+2. Espresso
+   - Description: Rich and aromatic espresso shot.
+   - Dietary Options: Vegan, Gluten-Free
+   - Calories: 5 kcal
+   - Carbohydrates: 1g
+   - Proteins: 0g
+   - Fats: 0g
+
+Additional Information:
+- All our dishes are made with the freshest ingredients.
+- We offer customizations for dietary restrictions and allergies.
+- Nutritional values are approximate and can vary based on portion size and preparation methods.
+
+Contact Information:
+- Phone: (123) 456-7890
+- Email: info@gourmetdelights.com
+- Address: 123 Foodie Lane, Flavor Town, FT 12345
+- Website: www.gourmetdelights.com
