@@ -1,12 +1,13 @@
 import os
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 # Langchain libraries for building the retrieval-based QA pipeline
 from langchain import HuggingFaceHub  # Access pre-trained models from Hugging Face Hub
 from langchain.chains import RetrievalQA  # Build a retrieval-based question answering pipeline
-from langchain.document_loaders import TextLoader  # Load documents from text files
-from langchain.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
+from langchain_community.document_loaders import TextLoader  # Load documents from text files
+from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
-from langchain.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
+from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
 
 from transformers import pipeline  # Load pre-trained models for text generation from Transformers library
 
@@ -22,7 +23,7 @@ class CustomerAssistanceAgent():
         self.db_path = "faiss_index"
 
         # Loads entire pipline
-        self.pipline = self.load_pipline()
+        self.pipeline = self.load_pipline()
 
         # Get answer format
         self.prompt = self.get_answer_format()
@@ -55,7 +56,7 @@ class CustomerAssistanceAgent():
         db.save_local(self.db_path)
 
         # Load the FAISS index (if saved previously)
-        new_db = FAISS.load_local(self.db_path, embeddings)
+        new_db = FAISS.load_local(self.db_path, embeddings, allow_dangerous_deserialization=True)
 
         # Create a retriever object
         retriever = new_db.as_retriever()
