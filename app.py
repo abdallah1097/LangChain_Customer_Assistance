@@ -6,7 +6,6 @@ if __name__ == '__main__':
 
     question = "What is LLRT used for?"
 
-
     answer = agent.pipeline.run(question)
     response = agent.prompt.format(question=question, answer=answer)
 
