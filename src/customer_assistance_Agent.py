@@ -1,5 +1,5 @@
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 import logging
 logging.captureWarnings(True) # Ignore all warnings
@@ -16,8 +16,8 @@ class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
     def __init__(self):
         # Define Parameters
-        self.repo_id = "google/flan-t5-large"
-        self.model_kwargs = {"temperature": 0.7, "max_new_tokens": 250, "top_k":50, "repetition_penalty":1.03}
+        self.repo_id = "openai-community/gpt2" # "distilbert/distilgpt2" # "facebook/opt-125m" # "openai-community/gpt2" # "google/flan-t5-large"
+        self.model_kwargs = {"temperature": 0.01, "max_new_tokens": 250, "top_k": 1, "repetition_penalty":1.03}
         self.embedding_model_kargs = {}
         self.data_path = './data/menu.txt'
         self.chunk_size = 500
@@ -25,7 +25,7 @@ class CustomerAssistanceAgent():
         self.db_path = "faiss_index"
 
         # Initialize Models
-        self.embeddings_model = HuggingFaceEmbeddings() # SentenceTransformer('bert-base-nli-mean-tokens')
+        self.embeddings_model = HuggingFaceEmbeddings(model_name=self.repo_id, encode_kwargs = {'normalize_embeddings': True})
         self.llm_model = HuggingFaceHub(repo_id=self.repo_id, model_kwargs=self.model_kwargs)
 
         # Loads entire pipline
@@ -70,17 +70,22 @@ class CustomerAssistanceAgent():
 
     def create_faiss_db(self, docs):
         db = FAISS.from_documents(docs, self.embeddings_model)
-        print(f"\n[INFO] Created Index with: {db.index.ntotal}. Trying query database:")
-
-        query = "What pasta you have for luanch?"
-        response = db.similarity_search(query)
-        print(f"    query: {query}\n    response: {response}")
 
         # Create a retriever object
         retriever = db.as_retriever(
-                search_type="similarity_score_threshold",
-                search_kwargs={'score_threshold': 0.8}
+                # search_type="similarity_score_threshold",
+                # search_kwargs={'score_threshold': 0.5}
+                search_type="similarity",
+                search_kwargs={'k': 10}
+                # search_type="mmr",
+                # search_kwargs={'k': 5, 'fetch_k': 50}
             )
+        print(f"\n[INFO] Created Index with: {db.index.ntotal}. Trying query database:")
+
+        query = "What pasta you have for luanch?"
+        responses = retriever.invoke(query)
+        print(f"    query: {query}\n    responses: {[response.page_content for response in responses]}")
+
         return db, retriever
 
     def get_answer_format(self):
