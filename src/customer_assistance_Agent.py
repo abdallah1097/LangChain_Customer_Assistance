@@ -48,6 +48,11 @@ class CustomerAssistanceAgent():
         text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
         docs = text_splitter.split_documents(documents)
 
+        # See the splitted text document
+        print(f"Data Document Splitted into: {len(docs)} Chuncks {len(docs[0].page_content)} Char Each!")
+        for i, doc in enumerate(docs, 0):
+            print(f"    Chunck [{i}]: {len(doc.page_content)} Char | Starts with:\n        {doc.page_content[:50]}")
+
         # Generate document embeddings
         embeddings = HuggingFaceEmbeddings()
 
