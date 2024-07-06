@@ -9,9 +9,11 @@ from langchain_community.llms import HuggingFaceHub # Access pre-trained models 
 from langchain.chains import RetrievalQA  # Build a retrieval-based question answering pipeline
 from langchain_community.document_loaders import TextLoader  # Load documents from text files
 from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
+from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
 from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
 from sentence_transformers import SentenceTransformer
+import faiss
 
 class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
@@ -24,6 +26,10 @@ class CustomerAssistanceAgent():
         self.chunk_size = 500
         self.chunk_overlap = 0
         self.db_path = "faiss_index"
+
+        # Initialize Models
+        self.embeddings_model = HuggingFaceEmbeddings() # SentenceTransformer('bert-base-nli-mean-tokens')
+        self.llm_model = HuggingFaceHub(repo_id=self.repo_id, model_kwargs=self.model_kwargs)
 
         # Loads entire pipline
         self.pipeline = self.load_pipline()
@@ -38,36 +44,15 @@ class CustomerAssistanceAgent():
         Returns:
             RetrievalQA: The constructed retrieval-based question answering pipeline.
         """
-        # Load the Large Language Model (LLM)
-        llm = self.load_llm()
-
         # Load the documents
         docs = self.load_split_text()
 
-        # Generate document embeddings
-        sentence_embeddings = self.generate_embeddings(docs)
-
         # Create a FAISS index for efficient retrieval
-        db = FAISS.from_documents(docs, sentence_embeddings)
-
-        # Save the FAISS index (optional)
-        db.save_local(self.db_path)
-
-        # Load the FAISS index (if saved previously)
-        new_db = FAISS.load_local(self.db_path, sentence_embeddings, allow_dangerous_deserialization=True)
-
-        # Create a retriever object
-        retriever = new_db.as_retriever()
+        db, retriever = self.create_faiss_db(docs)
 
         # Build the RetrievalQA pipeline
-        qa_stuff = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, verbose=False)
+        qa_stuff = RetrievalQA.from_chain_type(llm=self.llm_model, chain_type="stuff", retriever=retriever, verbose=False)
         return qa_stuff
-
-    def load_llm(self):
-        """
-        Loads the Large Language Model (LLM)
-        """
-        return HuggingFaceHub(repo_id=self.repo_id, model_kwargs=self.model_kwargs)
 
     def load_split_text(self):
         """
@@ -78,26 +63,28 @@ class CustomerAssistanceAgent():
 
         # Split the documents into smaller chunks (optional)
         text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
-        splitted_documents = text_splitter.split_documents(documents)
-
-        docs = [i.page_content for i in splitted_documents]
+        docs = text_splitter.split_documents(documents)
 
         # See the splitted text document
-        print(f"\n[INFO] Data Document Splitted into: {len(docs)} Chuncks {len(docs[0])} Char Each!")
+        print(f"\n[INFO] Data Document Splitted into: {len(docs)} Chuncks {len(docs[0].page_content)} Char Each!")
         for i, doc in enumerate(docs, 0):
-            print(f"    Chunck [{i}]: {len(doc)} Char | Starts with:\n        {doc[:50]}")
+            print(f"    Chunck [{i}]: {len(doc.page_content)} Char | Starts with:\n        {doc.page_content[:50]}")
         return docs
 
-    def generate_embeddings(self, docs):
-        """
-        Generates model embeddings
-        """
-        # embeddings = HuggingFaceEmbeddings()
-        embeddings_model = SentenceTransformer('bert-base-nli-mean-tokens')
-        # create sentence embeddings
-        sentence_embeddings = embeddings_model.encode(docs)
-        print(f"\n[INFO] Sentence Embeddings Shape: {sentence_embeddings.shape}")
-        return sentence_embeddings
+    def create_faiss_db(self, docs):
+        db = FAISS.from_documents(docs, self.embeddings_model)
+        print(f"\n[INFO] Created Index with: {db.index.ntotal}. Trying query database:")
+
+        query = "What pasta you have for luanch?"
+        response = db.similarity_search(query)
+        print(f"    query: {query}\n    response: {response}")
+
+        # Create a retriever object
+        retriever = db.as_retriever(
+                search_type="similarity_score_threshold",
+                search_kwargs={'score_threshold': 0.8}
+            )
+        return db, retriever
 
     def get_answer_format(self):
         """
