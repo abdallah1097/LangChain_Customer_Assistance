@@ -9,11 +9,8 @@ from langchain_community.llms import HuggingFaceHub # Access pre-trained models 
 from langchain.chains import RetrievalQA  # Build a retrieval-based question answering pipeline
 from langchain_community.document_loaders import TextLoader  # Load documents from text files
 from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
-from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
 from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
-from sentence_transformers import SentenceTransformer
-import faiss
 
 class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
