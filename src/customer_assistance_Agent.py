@@ -5,7 +5,7 @@ import logging
 logging.captureWarnings(True) # Ignore all warnings
 
 # Langchain libraries for building the retrieval-based QA pipeline
-from langchain import HuggingFaceHub  # Access pre-trained models from Hugging Face Hub
+from langchain_community.llms import HuggingFaceHub # Access pre-trained models from Hugging Face Hub
 from langchain.chains import RetrievalQA  # Build a retrieval-based question answering pipeline
 from langchain_community.document_loaders import TextLoader  # Load documents from text files
 from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
