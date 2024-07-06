@@ -54,7 +54,7 @@ class CustomerAssistanceAgent():
         db.save_local(self.db_path)
 
         # Load the FAISS index (if saved previously)
-        new_db = FAISS.load_local(self.db_path, embeddings, allow_dangerous_deserialization=True)
+        new_db = FAISS.load_local(self.db_path, sentence_embeddings, allow_dangerous_deserialization=True)
 
         # Create a retriever object
         retriever = new_db.as_retriever()
@@ -62,7 +62,6 @@ class CustomerAssistanceAgent():
         # Build the RetrievalQA pipeline
         qa_stuff = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, verbose=False)
         return qa_stuff
-
 
     def load_llm(self):
         """
@@ -84,7 +83,7 @@ class CustomerAssistanceAgent():
         docs = [i.page_content for i in splitted_documents]
 
         # See the splitted text document
-        print(f"Data Document Splitted into: {len(docs)} Chuncks {len(docs[0])} Char Each!")
+        print(f"\n[INFO] Data Document Splitted into: {len(docs)} Chuncks {len(docs[0])} Char Each!")
         for i, doc in enumerate(docs, 0):
             print(f"    Chunck [{i}]: {len(doc)} Char | Starts with:\n        {doc[:50]}")
         return docs
@@ -97,7 +96,7 @@ class CustomerAssistanceAgent():
         embeddings_model = SentenceTransformer('bert-base-nli-mean-tokens')
         # create sentence embeddings
         sentence_embeddings = embeddings_model.encode(docs)
-        print(f"Sentence Embeddings Shape: {sentence_embeddings.shape}")
+        print(f"\n[INFO] Sentence Embeddings Shape: {sentence_embeddings.shape}")
         return sentence_embeddings
 
     def get_answer_format(self):
