@@ -9,7 +9,7 @@ if __name__ == '__main__':
         question = input("Enter your question: ")
 
         # Get answer from pipeline
-        answer = agent.pipeline.run(question)
+        answer = agent.query_with_prefix(question)
 
         # Format & print output answer
         print(agent.prompt.format(question=question, answer=answer))

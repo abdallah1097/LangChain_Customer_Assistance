@@ -23,15 +23,16 @@ class CustomerAssistanceAgent():
     def __init__(self):
         # Define Parameters
         self.repo_id = "openai-community/gpt2" # "distilbert/distilgpt2" # "facebook/opt-125m" # "openai-community/gpt2" # "google/flan-t5-large"
-        self.model_kwargs = {"temperature": 0.01, "max_new_tokens": 250, "top_k": 1, "repetition_penalty":1.03}
+        self.model_kwargs = {"temperature": 0.1, "max_new_tokens": 250, "top_k": 1, "repetition_penalty":1.03}
         self.embedding_model_kargs = {}
         self.data_path = './data'
         self.db_path = "faiss_index"
 
         # Initialize Models
-        self.embeddings_model = SentenceTransformer(model_name_or_path='all-MiniLM-L12-v2',
-                                                    similarity_fn_name='cosine',
-                                                    )
+        self.embeddings_model = HuggingFaceEmbeddings()
+        # SentenceTransformer(model_name_or_path='all-MiniLM-L12-v2',
+                                                    # similarity_fn_name='cosine',
+                                                    # )
         self.llm_model = HuggingFaceHub(repo_id="openai-community/gpt2", model_kwargs=self.model_kwargs)
 
         # Load the documents
@@ -56,7 +57,7 @@ class CustomerAssistanceAgent():
         db, retriever = self.create_faiss_db(docs)
 
         # Build the RetrievalQA pipeline
-        qa_stuff = RetrievalQA.from_chain_type(llm=self.llm_model, chain_type="stuff", retriever=retriever, verbose=False)
+        qa_stuff = RetrievalQA.from_chain_type(llm=self.llm_model, chain_type="stuff", retriever=retriever, verbose=True)
         return qa_stuff
 
     def load_split_text(self):
@@ -87,15 +88,16 @@ class CustomerAssistanceAgent():
                 # search_type="similarity_score_threshold",
                 # search_kwargs={'score_threshold': 0.5}
                 search_type="similarity",
-                search_kwargs={'k': 10}
+                search_kwargs={'k': 5}
                 # search_type="mmr",
-                # search_kwargs={'k': 5, 'fetch_k': 50}
+                # search_kwargs={'k': 5, 'fetch_k': 71}
             )
         print(f"\n[INFO] Created Index with: {db.index.ntotal}. Trying query database:")
 
-        query = "What pasta you have for luanch?"
+        query = "What rice you have?"
         responses = retriever.invoke(query)
-        print(f"    query: {query}\n    responses: {[response.page_content for response in responses]}")
+        for response in responses:
+            print(f"\n\n    query: {query} response: {response.page_content}")
 
         return db, retriever
 
@@ -111,8 +113,36 @@ class CustomerAssistanceAgent():
             str: The formatted template string.
         """
         template = """
-        Question: {question}
-        Answer for the given documents:
+        This is what we got in our meneu:
             {answer}"""
 
         return template.format(question="{question}", answer="{answer}")
+
+    def query_with_prefix(self, question):
+        """
+        Adds a prefix to the LLM prompt after retrieving relevant documents based on the original query.
+
+        Args:
+            question (str): The original query.
+
+        Returns:
+            str: The response from the LLM model with the prefixed query.
+        """
+        # Retrieve relevant documents based on the original query
+        retriever = self.pipeline.retriever
+        retrieved_docs = retriever.invoke(question)
+
+        # Combine the retrieved documents into a single context
+        context = "\n\n".join([doc.page_content for doc in retrieved_docs])
+
+        prefix_1 = "Agent requested this query: "
+        prefix_2 = "This is our menue:"
+        prefix_3 = "reply to user in a fancy human-like way"
+
+        # Add the prefix to the LLM prompt
+        llm_prompt = f"{prefix_1}{question}\n\n{prefix_2}\n{context}\n\n{prefix_3}"
+        print(f"\n\nllm_prompt: {llm_prompt}")
+
+        # Get the response from the LLM model
+        response = self.llm_model(llm_prompt)
+        return response
