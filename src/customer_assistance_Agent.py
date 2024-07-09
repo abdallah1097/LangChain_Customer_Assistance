@@ -1,9 +1,14 @@
 import os
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
-import logging
-logging.captureWarnings(True) # Ignore all warnings
+# import logging
+# logging.captureWarnings(True) # Ignore all warnings
 
+# Langchain libraries for building the retrieval-based QA pipeline
+from langchain_community.document_loaders import TextLoader  # Load documents from text files
+from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
+from sentence_transformers import SentenceTransformer
+from langchain_community.llms import HuggingFaceHub # Access pre-trained models from Hugging Face Hub
 # Langchain libraries for building the retrieval-based QA pipeline
 from langchain_community.llms import HuggingFaceHub # Access pre-trained models from Hugging Face Hub
 from langchain.chains import RetrievalQA  # Build a retrieval-based question answering pipeline
@@ -11,6 +16,7 @@ from langchain_community.document_loaders import TextLoader  # Load documents fr
 from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
 from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
+
 
 class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
@@ -21,28 +27,32 @@ class CustomerAssistanceAgent():
         self.embedding_model_kargs = {}
         self.data_path = './data/menu.txt'
         self.chunk_size = 500
-        self.chunk_overlap = 0
+        self.chunk_overlap = 50
         self.db_path = "faiss_index"
 
         # Initialize Models
-        self.embeddings_model = HuggingFaceEmbeddings(model_name=self.repo_id, encode_kwargs = {'normalize_embeddings': True})
-        self.llm_model = HuggingFaceHub(repo_id=self.repo_id, model_kwargs=self.model_kwargs)
+        self.embeddings_model = SentenceTransformer(model_name_or_path='all-MiniLM-L12-v2',
+                                                    similarity_fn_name='cosine',
+                                                    )
+        self.llm_model = HuggingFaceHub(repo_id="openai-community/gpt2", model_kwargs=self.model_kwargs)
+
+        # Load the documents
+        docs = self.load_split_text()
 
         # Loads entire pipline
-        self.pipeline = self.load_pipline()
+        self.pipeline = self.load_pipline(docs)
 
         # Get answer format
         self.prompt = self.get_answer_format()
 
-    def load_pipline(self):
+    def load_pipline(self, docs):
         """
         Loads and builds the retrieval-based question answering pipeline.
 
         Returns:
             RetrievalQA: The constructed retrieval-based question answering pipeline.
         """
-        # Load the documents
-        docs = self.load_split_text()
+
 
         # Create a FAISS index for efficient retrieval
         db, retriever = self.create_faiss_db(docs)
@@ -60,12 +70,14 @@ class CustomerAssistanceAgent():
 
         # Split the documents into smaller chunks (optional)
         text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
-        docs = text_splitter.split_documents(documents)
+        splitted_document = text_splitter.split_documents(documents)
+
+        docs = [doc.page_content for doc in splitted_document]
 
         # See the splitted text document
-        print(f"\n[INFO] Data Document Splitted into: {len(docs)} Chuncks {len(docs[0].page_content)} Char Each!")
+        print(f"\n[INFO] Data Document Splitted into: {len(docs)} Chuncks {len(docs[0])} Char Each!")
         for i, doc in enumerate(docs, 0):
-            print(f"    Chunck [{i}]: {len(doc.page_content)} Char | Starts with:\n        {doc.page_content[:50]}")
+            print(f"    Chunck [{i}]: {len(doc)} Char | Starts with:\n        {doc[:50]}")
         return docs
 
     def create_faiss_db(self, docs):
