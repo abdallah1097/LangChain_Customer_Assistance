@@ -1,0 +1,7 @@
+16. Beef Burrito Bowl
+    - Description: A bowl of seasoned beef, rice, black beans, corn, and cheese, topped with sour cream and salsa.
+    - Dietary Options: Gluten-Free
+    - Calories: 700 kcal
+    - Carbohydrates: 70g
+    - Proteins: 40g
+    - Fats: 30g

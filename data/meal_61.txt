@@ -1,0 +1,7 @@
+11. Protein Shake
+    - Description: A shake made with protein powder, almond milk, and a banana.
+    - Dietary Options: Vegan, Gluten-Free
+    - Calories: 200 kcal
+    - Carbohydrates: 30g
+    - Proteins: 15g
+    - Fats: 5g

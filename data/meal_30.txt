@@ -1,0 +1,7 @@
+20. Chicken Parmesan
+    - Description: Breaded chicken breast topped with marinara sauce and mozzarella cheese, served with spaghetti.
+    - Dietary Options: Gluten-Free (with GF breading and pasta)
+    - Calories: 750 kcal
+    - Carbohydrates: 60g
+    - Proteins: 45g
+    - Fats: 30g

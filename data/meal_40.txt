@@ -1,0 +1,7 @@
+10. Brownie Sundae
+    - Description: Fudgy brownie topped with vanilla ice cream, whipped cream, and chocolate sauce.
+    - Dietary Options: Vegetarian
+    - Calories: 550 kcal
+    - Carbohydrates: 70g
+    - Proteins: 7g
+    - Fats: 25g

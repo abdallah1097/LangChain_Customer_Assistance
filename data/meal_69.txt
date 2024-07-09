@@ -1,0 +1,7 @@
+19. Milkshake
+    - Description: Thick and creamy milkshake available in chocolate, vanilla, and strawberry.
+    - Dietary Options: Vegetarian, Gluten-Free
+    - Calories: 300 kcal
+    - Carbohydrates: 45g
+    - Proteins: 8g
+    - Fats: 10g

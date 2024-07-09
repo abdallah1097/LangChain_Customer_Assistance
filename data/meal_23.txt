@@ -1,0 +1,7 @@
+13. Veggie Burger
+    - Description: A hearty veggie patty served on a whole wheat bun with lettuce, tomato, and avocado.
+    - Dietary Options: Vegetarian, Vegan (without mayo)
+    - Calories: 450 kcal
+    - Carbohydrates: 60g
+    - Proteins: 20g
+    - Fats: 15g

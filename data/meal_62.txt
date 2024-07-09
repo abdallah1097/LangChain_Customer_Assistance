@@ -1,0 +1,7 @@
+12. Mocha
+    - Description: Espresso mixed with chocolate syrup and steamed milk.
+    - Dietary Options: Vegetarian, Gluten-Free
+    - Calories: 250 kcal
+    - Carbohydrates: 40g
+    - Proteins: 8g
+    - Fats: 7g

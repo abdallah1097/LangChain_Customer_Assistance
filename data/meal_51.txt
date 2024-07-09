@@ -1,0 +1,8 @@
+Beverages:
+1. Green Smoothie
+   - Description: A blend of spinach, kale, apple, and banana.
+   - Dietary Options: Vegan, Gluten-Free
+   - Calories: 180 kcal
+   - Carbohydrates: 35g
+   - Proteins: 3g
+   - Fats: 2g

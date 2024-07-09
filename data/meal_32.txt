@@ -1,0 +1,7 @@
+2. Fresh Fruit Platter
+   - Description: A selection of seasonal fruits.
+   - Dietary Options: Vegan, Gluten-Free
+   - Calories: 200 kcal
+   - Carbohydrates: 50g
+   - Proteins: 2g
+   - Fats: 1g
