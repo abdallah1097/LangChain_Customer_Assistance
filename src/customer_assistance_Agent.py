@@ -23,6 +23,7 @@ class CustomerAssistanceAgent():
         self.model_kwargs = {"temperature": 0.5, "max_new_tokens": 250, "top_k": 1}
         self.embedding_model_kargs = {}
         self.data_path = './data'
+        self.DEBUG = False
 
         # Initialize Models
         self.embeddings_model = HuggingFaceEmbeddings()
@@ -73,10 +74,11 @@ class CustomerAssistanceAgent():
         text_splitter = CharacterTextSplitter()
         splitted_document = text_splitter.split_documents(documents)
 
-        # See the splitted text document
-        print(f"\n[INFO] Data Document Splitted into: {len(splitted_document)} Chuncks {len(splitted_document[0].page_content)} Char Each!")
-        for i, doc in enumerate(splitted_document, 0):
-            print(f"    Chunck [{i}]: {len(doc.page_content)} Char | Starts with:\n        {doc.page_content}")
+        if self.DEBUG:
+            # See the splitted text document
+            print(f"\n[INFO] Data Document Splitted into: {len(splitted_document)} Chuncks {len(splitted_document[0].page_content)} Char Each!")
+            for i, doc in enumerate(splitted_document, 0):
+                print(f"    Chunck [{i}]: {len(doc.page_content)} Char | Starts with:\n        {doc.page_content}")
         return splitted_document
 
     def create_faiss_db(self, docs):
@@ -91,12 +93,14 @@ class CustomerAssistanceAgent():
                 # search_type="mmr",
                 # search_kwargs={'k': 5, 'fetch_k': 71}
             )
-        print(f"\n[INFO] Created Index with: {db.index.ntotal}. Trying query database:")
+        if self.DEBUG:
+            print(f"\n[INFO] Created Index with: {db.index.ntotal}. Trying query database:")
 
         query = "What rice you have?"
         responses = retriever.invoke(query)
-        for response in responses:
-            print(f"\n\n    query: {query} response: {response.page_content}")
+        if self.DEBUG:
+            for response in responses:
+                print(f"\n\n    query: {query} response: {response.page_content}")
 
         return db, retriever
 
@@ -142,7 +146,8 @@ class CustomerAssistanceAgent():
 
             # Extract the GPT response and print it
             gpt_question_response = response.choices[0].message.content
-        print(f"    [INFO] Summarized Response: {gpt_question_response}")
+        if self.DEBUG:
+            print(f"    [INFO] Summarized Response: {gpt_question_response}")
 
         # Retrieve relevant documents based on the original query
         retriever = self.pipeline.retriever
@@ -150,12 +155,14 @@ class CustomerAssistanceAgent():
 
         # Combine the retrieved documents into a single context
         context = "\n\n".join([doc.page_content for doc in retrieved_docs])
-        print(f"    [INFO] Database hit return: {context}")
+        if self.DEBUG:
+            print(f"    [INFO] Database hit return: {context}")
 
         # Add the prefix to the LLM prompt
         llm_prompt = f"Agent requested this query: {question}\n\nThis is our menue: \n{context}\n\nSummarize only {gpt_question_response} dishes found in menue and ignore any other meals doesn't have {gpt_question_response} in a fancy human-like way"
         gpt_final_response = "sorry"
-        print(f"    [INFO] Final LLM Prompt: {llm_prompt}")
+        if self.DEBUG:
+            print(f"    [INFO] Final LLM Prompt: {llm_prompt}")
         while "sorry" in gpt_final_response:
             # Get GPT's response
             response = self.gpt_client.chat.completions.create(
