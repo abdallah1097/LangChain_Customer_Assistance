@@ -23,7 +23,7 @@ class CustomerAssistanceAgent():
         self.model_kwargs = {"temperature": 0.5, "max_new_tokens": 250, "top_k": 1}
         self.embedding_model_kargs = {}
         self.data_path = './data'
-        self.DEBUG = False
+        self.DEBUG = True
 
         # Initialize Models
         self.embeddings_model = HuggingFaceEmbeddings()
@@ -88,8 +88,8 @@ class CustomerAssistanceAgent():
         retriever = db.as_retriever(
                 # search_type="similarity_score_threshold",
                 # search_kwargs={'score_threshold': 0.5}
-                # search_type="similarity",
-                # search_kwargs={'k': 5}
+                search_type="similarity",
+                search_kwargs={'k': 5}
                 # search_type="mmr",
                 # search_kwargs={'k': 5, 'fetch_k': 71}
             )
