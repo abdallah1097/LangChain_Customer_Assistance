@@ -137,7 +137,7 @@ class CustomerAssistanceAgent():
             # Get GPT's response
             response = self.gpt_client.chat.completions.create(
                 messages=[{"role": "user", "content": question_llm_prompt}],
-                model="gpt-3.5-turbo",
+                model=self.llm_model_name,
             )
 
             # Extract the GPT response and print it
@@ -160,7 +160,7 @@ class CustomerAssistanceAgent():
             # Get GPT's response
             response = self.gpt_client.chat.completions.create(
                 messages=[{"role": "user", "content": llm_prompt}],
-                model="gpt-3.5-turbo",
+                model=self.llm_model_name,
             )
 
             # Extract the GPT response and print it
