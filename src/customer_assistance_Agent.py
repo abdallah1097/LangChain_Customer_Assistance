@@ -1,39 +1,37 @@
 import os
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 
-# import logging
-# logging.captureWarnings(True) # Ignore all warnings
+import logging
+logging.captureWarnings(True) # Ignore all warnings
 
 # Langchain libraries for building the retrieval-based QA pipeline
 from langchain_community.document_loaders.generic import GenericLoader  # Load documents from text files
-from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
-from sentence_transformers import SentenceTransformer
-from langchain_community.llms import HuggingFaceHub # Access pre-trained models from Hugging Face Hub
-# Langchain libraries for building the retrieval-based QA pipeline
 from langchain_community.llms import HuggingFaceHub # Access pre-trained models from Hugging Face Hub
 from langchain.chains import RetrievalQA  # Build a retrieval-based question answering pipeline
-from langchain_community.document_loaders import TextLoader  # Load documents from text files
 from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate embeddings for documents using Hugging Face models
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
 from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
+from g4f.client import Client
 
 
 class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
     def __init__(self):
         # Define Parameters
-        self.repo_id = "openai-community/gpt2" # "distilbert/distilgpt2" # "facebook/opt-125m" # "openai-community/gpt2" # "google/flan-t5-large"
-        self.model_kwargs = {"temperature": 0.1, "max_new_tokens": 250, "top_k": 1, "repetition_penalty":1.03}
+        self.llm_model_name = "gpt-3.5-turbo"
+        self.model_kwargs = {"temperature": 0.5, "max_new_tokens": 250, "top_k": 1}
         self.embedding_model_kargs = {}
         self.data_path = './data'
-        self.db_path = "faiss_index"
 
         # Initialize Models
         self.embeddings_model = HuggingFaceEmbeddings()
-        # SentenceTransformer(model_name_or_path='all-MiniLM-L12-v2',
-                                                    # similarity_fn_name='cosine',
-                                                    # )
-        self.llm_model = HuggingFaceHub(repo_id="openai-community/gpt2", model_kwargs=self.model_kwargs)
+
+        # Initialize the GPT client with the desired provider
+        self.gpt_client = Client()
+
+        # Create a memory of appended chat history
+        self.chat_history = []
 
         # Load the documents
         docs = self.load_split_text()
@@ -57,7 +55,8 @@ class CustomerAssistanceAgent():
         db, retriever = self.create_faiss_db(docs)
 
         # Build the RetrievalQA pipeline
-        qa_stuff = RetrievalQA.from_chain_type(llm=self.llm_model, chain_type="stuff", retriever=retriever, verbose=True)
+        _llm_model = HuggingFaceHub(repo_id="openai-community/gpt2", model_kwargs=self.model_kwargs)
+        qa_stuff = RetrievalQA.from_chain_type(llm=_llm_model, chain_type="stuff", retriever=retriever, verbose=True)
         return qa_stuff
 
     def load_split_text(self):
@@ -87,8 +86,8 @@ class CustomerAssistanceAgent():
         retriever = db.as_retriever(
                 # search_type="similarity_score_threshold",
                 # search_kwargs={'score_threshold': 0.5}
-                search_type="similarity",
-                search_kwargs={'k': 5}
+                # search_type="similarity",
+                # search_kwargs={'k': 5}
                 # search_type="mmr",
                 # search_kwargs={'k': 5, 'fetch_k': 71}
             )
@@ -128,21 +127,48 @@ class CustomerAssistanceAgent():
         Returns:
             str: The response from the LLM model with the prefixed query.
         """
+        # Update the conversation history with GPT's response
+        self.chat_history.append({"role": "user", "content": question})
+
+        question_llm_prompt = f"Extract important keywords, ignore all questions words/ irrelevent content and return ONLY KEYWORDS: {question}"
+        gpt_question_response = "sorry" # To keep retrying from agent
+
+        while "sorry" in gpt_question_response:
+            # Get GPT's response
+            response = self.gpt_client.chat.completions.create(
+                messages=[{"role": "user", "content": question_llm_prompt}],
+                model="gpt-3.5-turbo",
+            )
+
+            # Extract the GPT response and print it
+            gpt_question_response = response.choices[0].message.content
+        print(f"    [INFO] Summarized Response: {gpt_question_response}")
+
         # Retrieve relevant documents based on the original query
         retriever = self.pipeline.retriever
-        retrieved_docs = retriever.invoke(question)
+        retrieved_docs = retriever.invoke(gpt_question_response)
 
         # Combine the retrieved documents into a single context
         context = "\n\n".join([doc.page_content for doc in retrieved_docs])
-
-        prefix_1 = "Agent requested this query: "
-        prefix_2 = "This is our menue:"
-        prefix_3 = "reply to user in a fancy human-like way"
+        print(f"    [INFO] Database hit return: {context}")
 
         # Add the prefix to the LLM prompt
-        llm_prompt = f"{prefix_1}{question}\n\n{prefix_2}\n{context}\n\n{prefix_3}"
-        print(f"\n\nllm_prompt: {llm_prompt}")
+        llm_prompt = f"Agent requested this query: {question}\n\nThis is our menue: \n{context}\n\nSummarize only {gpt_question_response} dishes found in menue and ignore any other meals doesn't have {gpt_question_response} in a fancy human-like way"
+        gpt_final_response = "sorry"
+        print(f"    [INFO] Final LLM Prompt: {llm_prompt}")
+        while "sorry" in gpt_final_response:
+            # Get GPT's response
+            response = self.gpt_client.chat.completions.create(
+                messages=[{"role": "user", "content": llm_prompt}],
+                model="gpt-3.5-turbo",
+            )
 
-        # Get the response from the LLM model
-        response = self.llm_model(llm_prompt)
-        return response
+            # Extract the GPT response and print it
+            gpt_final_response = response.choices[0].message.content
+
+        print(f"Bot: {gpt_final_response}")
+
+        # Update the conversation history with GPT's response
+        self.chat_history.append({"role": "assistant", "content": gpt_final_response})
+
+        return gpt_final_response

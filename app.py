@@ -6,10 +6,18 @@ if __name__ == '__main__':
 
     while True:
         # Get user input
-        question = input("Enter your question: ")
+        user_input = input("You: ")
+
+        # Check if the user wants to exit the chat
+        if user_input.lower() == "exit":
+            print("Exiting chat...")
+            break  # Exit the loop to end the conversation
 
         # Get answer from pipeline
-        answer = agent.query_with_prefix(question)
+        agent.query_with_prefix(user_input)
 
-        # Format & print output answer
-        print(agent.prompt.format(question=question, answer=answer))
+        # # Get answer from pipeline
+        # answer = agent.query_with_prefix(question)
+
+        # # Format & print output answer
+        # print(agent.prompt.format(question=question, answer=answer))
