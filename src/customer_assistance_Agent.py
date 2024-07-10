@@ -13,7 +13,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings  # Generate emb
 from langchain.text_splitter import CharacterTextSplitter  # Split documents into smaller chunks for processing
 from langchain_community.vectorstores import FAISS  # Use FAISS for efficient retrieval of similar documents
 from g4f.client import Client
-
+import unicodedata
 
 class CustomerAssistanceAgent():
     # Class implements Customer Assistance Agent
@@ -104,6 +104,12 @@ class CustomerAssistanceAgent():
 
         return template.format(question="{question}", answer="{answer}")
 
+    def contains_chinese(self, text):
+        for char in text:
+            if 'CJK' in unicodedata.name(char, ''):
+                return True
+        return False
+
     def query_with_prefix(self, question):
         """
         Adds a prefix to the LLM prompt after retrieving relevant documents based on the original query.
@@ -115,12 +121,12 @@ class CustomerAssistanceAgent():
             str: The response from the LLM model with the prefixed query.
         """
         # Update the conversation history with GPT's response
-        self.chat_history.append({"role": "user", "content": question})
+        # self.chat_history.append({"role": "user", "content": question})
 
-        question_llm_prompt = f"Extract important keywords, ignore all questions words/ irrelevent content and return ONLY KEYWORDS: {question}"
+        question_llm_prompt = f"If it is a new question: Extract important keywords, ignore all questions words/ irrelevent content and return ONLY KEYWORDS: {question}. If it is a follow-up question, return as same as sent question"
         gpt_question_response = "sorry" # To keep retrying from agent
 
-        while "sorry" in gpt_question_response:
+        while "sorry" in gpt_question_response or self.contains_chinese(gpt_question_response):
             # Get GPT's response
             response = self.gpt_client.chat.completions.create(
                 messages=[{"role": "user", "content": question_llm_prompt}],
@@ -142,14 +148,16 @@ class CustomerAssistanceAgent():
             print(f"    [INFO] Database hit return: {context}")
 
         # Add the prefix to the LLM prompt
-        llm_prompt = f"Agent requested this query: {question}\n\nThis is our menue: \n{context}\n\nSummarize only {gpt_question_response} dishes found in menue and ignore any other meals doesn't have {gpt_question_response} in a fancy human-like way"
+        llm_prompt = f"I wanted to ask: {question}\n\nThis is resturant menue: \n{context}\n\nSummarize only {gpt_question_response} dishes found in menue and ignore any other meals doesn't have {gpt_question_response} in a fancy human-like way"
+        self.chat_history.append({"role": "user", "content": llm_prompt})
         gpt_final_response = "sorry"
         if self.DEBUG:
             print(f"    [INFO] Final LLM Prompt: {llm_prompt}")
-        while "sorry" in gpt_final_response:
+
+        while "sorry" in gpt_final_response or self.contains_chinese(gpt_final_response):
             # Get GPT's response
             response = self.gpt_client.chat.completions.create(
-                messages=[{"role": "user", "content": llm_prompt}],
+                messages=self.chat_history,
                 model=self.llm_model_name,
             )
 
