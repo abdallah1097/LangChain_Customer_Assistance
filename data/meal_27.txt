@@ -1,7 +1,9 @@
-17. Fish Tacos
-    - Description: Soft corn tortillas filled with grilled fish, cabbage slaw, and lime crema.
-    - Dietary Options: Gluten-Free
-    - Calories: 450 kcal
-    - Carbohydrates: 35g
-    - Proteins: 25g
-    - Fats: 20g
+Keywords: Grilled fish, Cabbage slaw, Lime crema, Corn tortillas
+Parent Categories: Seafood, Vegetables, Condiments, Grains
+    Fish Tacos
+        Description: Soft corn tortillas filled with grilled fish, cabbage slaw, and lime crema.
+        Dietary Options: Gluten-Free
+        Calories: 450 kcal
+        Carbohydrates: 35g
+        Proteins: 25g
+        Fats: 20g

@@ -1,7 +1,9 @@
-8. Bruschetta
-   - Description: Toasted baguette slices topped with a mix of tomatoes, garlic, and basil.
-   - Dietary Options: Vegetarian, Vegan
-   - Calories: 220 kcal
-   - Carbohydrates: 35g
-   - Proteins: 5g
-   - Fats: 8g
+Keywords: Baguette, Tomatoes, Garlic, Basil
+Parent Categories: Grains, Vegetables, Herbs
+    Bruschetta
+        Description: Toasted baguette slices topped with a mix of tomatoes, garlic, and basil.
+        Dietary Options: Vegetarian, Vegan
+        Calories: 220 kcal
+        Carbohydrates: 35g
+        Proteins: 5g
+        Fats: 8g

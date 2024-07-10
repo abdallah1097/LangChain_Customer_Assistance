@@ -1,7 +1,9 @@
-5. Veggie Stir Fry
-   - Description: A mix of fresh vegetables stir-fried with tofu and a savory sauce, served over brown rice.
-   - Dietary Options: Vegan, Gluten-Free
-   - Calories: 450 kcal
-   - Carbohydrates: 65g
-   - Proteins: 20g
-   - Fats: 15g
+Keywords: Fresh vegetables, Tofu, Savory sauce, Brown rice
+Parent Categories: Vegetables, Legumes, Condiments, Grains
+    Veggie Stir Fry
+        Description: A mix of fresh vegetables stir-fried with tofu and a savory sauce, served over brown rice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 450 kcal
+        Carbohydrates: 65g
+        Proteins: 20g
+        Fats: 15g

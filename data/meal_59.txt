@@ -1,7 +1,9 @@
-9. Lemonade
-   - Description: Refreshing lemonade made with freshly squeezed lemons.
-   - Dietary Options: Vegan, Gluten-Free
-   - Calories: 90 kcal
-   - Carbohydrates: 25g
-   - Proteins: 0g
-   - Fats: 0g
+Keywords: Lemonade, Freshly squeezed lemons
+Parent Categories: Juices, Beverages, Fruits
+    Lemonade
+        Description: Refreshing lemonade made with freshly squeezed lemons.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 90 kcal
+        Carbohydrates: 25g
+        Proteins: 0g
+        Fats: 0g

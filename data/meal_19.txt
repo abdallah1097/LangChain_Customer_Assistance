@@ -1,7 +1,9 @@
-9. Spaghetti Bolognese
-   - Description: Spaghetti pasta with a rich meat sauce made from ground beef and tomatoes.
-   - Dietary Options: Gluten-Free (with GF pasta)
-   - Calories: 600 kcal
-   - Carbohydrates: 70g
-   - Proteins: 30g
-   - Fats: 20g
+Keywords: Spaghetti pasta, Meat sauce, Ground beef, Tomatoes
+Parent Categories: Grains, Meat, Vegetables
+    Spaghetti Bolognese
+        Description: Spaghetti pasta with a rich meat sauce made from ground beef and tomatoes.
+        Dietary Options: Gluten-Free (with GF pasta)
+        Calories: 600 kcal
+        Carbohydrates: 70g
+        Proteins: 30g
+        Fats: 20g

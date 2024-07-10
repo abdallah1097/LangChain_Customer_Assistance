@@ -1,7 +1,9 @@
-7. Lemon Tart
-   - Description: Tangy lemon tart with a buttery crust.
-   - Dietary Options: Vegetarian
-   - Calories: 350 kcal
-   - Carbohydrates: 50g
-   - Proteins: 4g
-   - Fats: 15g
+Keywords: Lemon tart, Buttery crust
+Parent Categories: Tarts, Desserts, Dairy
+    Lemon Tart
+        Description: Tangy lemon tart with a buttery crust.
+        Dietary Options: Vegetarian
+        Calories: 350 kcal
+        Carbohydrates: 50g
+        Proteins: 4g
+        Fats: 15g

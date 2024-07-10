@@ -1,7 +1,9 @@
-5. Shrimp Cocktail
-   - Description: Fresh shrimp served with a tangy cocktail sauce.
-   - Dietary Options: Gluten-Free, Keto
-   - Calories: 120 kcal
-   - Carbohydrates: 5g
-   - Proteins: 15g
-   - Fats: 2g
+Keywords: Shrimp, Cocktail sauce
+Parent Categories: Seafood
+    Shrimp Cocktail
+        Description: Fresh shrimp served with a tangy cocktail sauce.
+        Dietary Options: Gluten-Free, Keto
+        Calories: 120 kcal
+        Carbohydrates: 5g
+        Proteins: 15g
+        Fats: 2g

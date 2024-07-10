@@ -1,7 +1,9 @@
-1. Garden Salad
-   - Description: Fresh mixed greens, cherry tomatoes, cucumbers, and a light vinaigrette dressing.
-   - Dietary Options: Vegetarian, Vegan, Gluten-Free
-   - Calories: 150 kcal
-   - Carbohydrates: 10g
-   - Proteins: 3g
-   - Fats: 10g
+Keywords: Mixed greens, Cherry tomatoes, Cucumbers, Vinaigrette dressing
+Parent Categories: Vegetables
+    Garden Salad
+        Description: Fresh mixed greens, cherry tomatoes, cucumbers, and a light vinaigrette dressing.
+        Dietary Options: Vegetarian, Vegan, Gluten-Free
+        Calories: 150 kcal
+        Carbohydrates: 10g
+        Proteins: 3g
+        Fats: 10g

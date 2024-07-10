@@ -1,7 +1,9 @@
-3. Cappuccino
-   - Description: Espresso with steamed milk and a frothy top.
-   - Dietary Options: Vegetarian, Gluten-Free
-   - Calories: 100 kcal
-   - Carbohydrates: 12g
-   - Proteins: 5g
-   - Fats: 4g
+Keywords: Espresso, Steamed milk, Frothy top
+Parent Categories: Coffee, Beverages, Dairy
+    Cappuccino
+        Description: Espresso with steamed milk and a frothy top.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 100 kcal
+        Carbohydrates: 12g
+        Proteins: 5g
+        Fats: 4g

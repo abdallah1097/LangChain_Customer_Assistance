@@ -1,7 +1,9 @@
-6. Avocado Toast
-   - Description: Toasted whole grain bread topped with smashed avocado, cherry tomatoes, and a sprinkle of chili flakes.
-   - Dietary Options: Vegetarian, Vegan (without butter)
-   - Calories: 300 kcal
-   - Carbohydrates: 40g
-   - Proteins: 6g
-   - Fats: 15g
+Keywords: Avocado, Whole grain bread, Cherry tomatoes, Chili flakes
+Parent Categories: Fruits, Grains, Vegetables, Spices
+    Avocado Toast
+        Description: Toasted whole grain bread topped with smashed avocado, cherry tomatoes, and a sprinkle of chili flakes.
+        Dietary Options: Vegetarian, Vegan (without butter)
+        Calories: 300 kcal
+        Carbohydrates: 40g
+        Proteins: 6g
+        Fats: 15g

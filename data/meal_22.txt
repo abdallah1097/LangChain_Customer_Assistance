@@ -1,7 +1,9 @@
-12. Beef Stroganoff
-    - Description: Tender beef strips cooked in a creamy mushroom sauce, served over egg noodles.
-    - Dietary Options: Gluten-Free (with GF noodles)
-    - Calories: 700 kcal
-    - Carbohydrates: 50g
-    - Proteins: 40g
-    - Fats: 35g
+Keywords: Beef strips, Mushroom sauce, Egg noodles
+Parent Categories: Meat, Vegetables, Dairy, Grains
+    Beef Stroganoff
+        Description: Tender beef strips cooked in a creamy mushroom sauce, served over egg noodles.
+        Dietary Options: Gluten-Free (with GF noodles)
+        Calories: 700 kcal
+        Carbohydrates: 50g
+        Proteins: 40g
+        Fats: 35g

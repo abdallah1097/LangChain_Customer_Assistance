@@ -1,7 +1,9 @@
-3. Tomato Basil Soup
-   - Description: Creamy tomato soup with fresh basil, served with a side of garlic bread.
-   - Dietary Options: Vegetarian
-   - Calories: 200 kcal
-   - Carbohydrates: 25g
-   - Proteins: 5g
-   - Fats: 10g
+Keywords: Tomato, Basil, Garlic bread
+Parent Categories: Vegetables, Herbs
+    Tomato Basil Soup
+        Description: Creamy tomato soup with fresh basil, served with a side of garlic bread.
+        Dietary Options: Vegetarian
+        Calories: 200 kcal
+        Carbohydrates: 25g
+        Proteins: 5g
+        Fats: 10g

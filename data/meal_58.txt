@@ -1,7 +1,9 @@
-8. Matcha Latte
-   - Description: Creamy latte made with matcha green tea.
-   - Dietary Options: Vegetarian, Gluten-Free
-   - Calories: 100 kcal
-   - Carbohydrates: 15g
-   - Proteins: 4g
-   - Fats: 3g
+Keywords: Matcha green tea, Latte
+Parent Categories: Teas, Beverages, Dairy
+    Matcha Latte
+        Description: Creamy latte made with matcha green tea.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 100 kcal
+        Carbohydrates: 15g
+        Proteins: 4g
+        Fats: 3g

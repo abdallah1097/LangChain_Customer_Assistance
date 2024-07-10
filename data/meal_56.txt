@@ -1,7 +1,9 @@
-6. Iced Coffee
-   - Description: Chilled coffee served over ice.
-   - Dietary Options: Vegan, Gluten-Free
-   - Calories: 50 kcal
-   - Carbohydrates: 12g
-   - Proteins: 1g
-   - Fats: 0g
+Keywords: Chilled coffee, Ice
+Parent Categories: Coffee, Beverages
+    Iced Coffee
+        Description: Chilled coffee served over ice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 50 kcal
+        Carbohydrates: 12g
+        Proteins: 1g
+        Fats: 0g

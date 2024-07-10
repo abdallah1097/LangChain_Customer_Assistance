@@ -1,7 +1,9 @@
-20. Strawberry Shortcake
-    - Description: Light sponge cake layered with whipped cream and fresh strawberries.
-    - Dietary Options: Vegetarian
-    - Calories: 350 kcal
-    - Carbohydrates: 50g
-    - Proteins: 5g
-    - Fats: 15g
+Keywords: Sponge cake, Whipped cream, Fresh strawberries
+Parent Categories: Cakes, Desserts, Dairy, Fruits
+    Strawberry Shortcake
+        Description: Light sponge cake layered with whipped cream and fresh strawberries.
+        Dietary Options: Vegetarian
+        Calories: 350 kcal
+        Carbohydrates: 50g
+        Proteins: 5g
+        Fats: 15g

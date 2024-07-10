@@ -1,7 +1,9 @@
-11. Grilled Chicken Breast
-    - Description: Juicy grilled chicken breast served with a side of steamed broccoli and mashed potatoes.
-    - Dietary Options: Gluten-Free, Keto, Paleo
-    - Calories: 400 kcal
-    - Carbohydrates: 30g
-    - Proteins: 35g
-    - Fats: 15g
+Keywords: Chicken breast, Steamed broccoli, Mashed potatoes
+Parent Categories: Poultry, Vegetables, Grains
+    Grilled Chicken Breast
+        Description: Juicy grilled chicken breast served with a side of steamed broccoli and mashed potatoes.
+        Dietary Options: Gluten-Free, Keto, Paleo
+        Calories: 400 kcal
+        Carbohydrates: 30g
+        Proteins: 35g
+        Fats: 15g

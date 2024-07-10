@@ -1,7 +1,9 @@
-2. Espresso
-   - Description: Rich and aromatic espresso shot.
-   - Dietary Options: Vegan, Gluten-Free
-   - Calories: 5 kcal
-   - Carbohydrates: 1g
-   - Proteins: 0g
-   - Fats: 0g
+Keywords: Espresso, Aromatic
+Parent Categories: Coffee, Beverages
+    Espresso
+        Description: Rich and aromatic espresso shot.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 5 kcal
+        Carbohydrates: 1g
+        Proteins: 0g
+        Fats: 0g

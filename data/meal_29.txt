@@ -1,7 +1,9 @@
-19. Ratatouille
-    - Description: A traditional French dish of stewed vegetables.
-    - Dietary Options: Vegetarian, Vegan, Gluten-Free
-    - Calories: 250 kcal
-    - Carbohydrates: 30g
-    - Proteins: 5g
-    - Fats: 10g
+Keywords: Stewed vegetables
+Parent Categories: Vegetables
+    Ratatouille
+        Description: A traditional French dish of stewed vegetables.
+        Dietary Options: Vegetarian, Vegan, Gluten-Free
+        Calories: 250 kcal
+        Carbohydrates: 30g
+        Proteins: 5g
+        Fats: 10g

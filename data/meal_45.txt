@@ -1,7 +1,9 @@
-15. Pear Tart
-    - Description: Delicate tart filled with almond cream and topped with sliced pears.
-    - Dietary Options: Vegetarian
-    - Calories: 350 kcal
-    - Carbohydrates: 45g
-    - Proteins: 5g
-    - Fats: 15g
+Keywords: Pear tart, Almond cream, Sliced pears
+Parent Categories: Tarts, Desserts, Nuts, Fruits
+    Pear Tart
+        Description: Delicate tart filled with almond cream and topped with sliced pears.
+        Dietary Options: Vegetarian
+        Calories: 350 kcal
+        Carbohydrates: 45g
+        Proteins: 5g
+        Fats: 15g

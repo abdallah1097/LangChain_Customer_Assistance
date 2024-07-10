@@ -1,7 +1,9 @@
-18. Detox Juice
-    - Description: A blend of cucumber, celery, green apple, and lemon juice.
-    - Dietary Options: Vegan, Gluten-Free
-    - Calories: 70 kcal
-    - Carbohydrates: 15g
-    - Proteins: 1g
-    - Fats: 0g
+Keywords: Detox juice, Cucumber, Celery, Green apple, Lemon juice
+Parent Categories: Juices, Beverages, Fruits, Vegetables
+    Detox Juice
+        Description: A blend of cucumber, celery, green apple, and lemon juice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 70 kcal
+        Carbohydrates: 15g
+        Proteins: 1g
+        Fats: 0g

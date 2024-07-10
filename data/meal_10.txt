@@ -1,7 +1,9 @@
-10. Spinach Artichoke Dip
-    - Description: Warm, cheesy dip served with tortilla chips.
-    - Dietary Options: Vegetarian, Gluten-Free (with GF chips)
-    - Calories: 350 kcal
-    - Carbohydrates: 20g
-    - Proteins: 12g
-    - Fats: 25g
+Keywords: Spinach, Artichoke, Cheese, Tortilla chips
+Parent Categories: Vegetables, Dairy, Grains
+    Spinach Artichoke Dip
+        Description: Warm, cheesy dip served with tortilla chips.
+        Dietary Options: Vegetarian, Gluten-Free (with GF chips)
+        Calories: 350 kcal
+        Carbohydrates: 20g
+        Proteins: 12g
+        Fats: 25g
