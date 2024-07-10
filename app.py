@@ -14,7 +14,7 @@ if __name__ == '__main__':
             break  # Exit the loop to end the conversation
 
         # Get answer from pipeline
-        agent.query_with_prefix(user_input)
+        response = agent.query_with_prefix(user_input)
 
         # # Get answer from pipeline
         # answer = agent.query_with_prefix(question)

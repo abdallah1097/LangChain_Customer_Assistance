@@ -37,28 +37,11 @@ class CustomerAssistanceAgent():
         # Load the documents
         docs = self.load_split_text()
 
-        # Loads entire pipline
-        self.pipeline = self.load_pipline(docs)
+        # Create a FAISS index for efficient retrieval
+        self.db, self.retriever = self.create_faiss_db(docs)
 
         # Get answer format
         self.prompt = self.get_answer_format()
-
-    def load_pipline(self, docs):
-        """
-        Loads and builds the retrieval-based question answering pipeline.
-
-        Returns:
-            RetrievalQA: The constructed retrieval-based question answering pipeline.
-        """
-
-
-        # Create a FAISS index for efficient retrieval
-        db, retriever = self.create_faiss_db(docs)
-
-        # Build the RetrievalQA pipeline
-        _llm_model = HuggingFaceHub(repo_id="openai-community/gpt2", model_kwargs=self.model_kwargs)
-        qa_stuff = RetrievalQA.from_chain_type(llm=_llm_model, chain_type="stuff", retriever=retriever, verbose=True)
-        return qa_stuff
 
     def load_split_text(self):
         """
@@ -150,7 +133,7 @@ class CustomerAssistanceAgent():
             print(f"    [INFO] Summarized Response: {gpt_question_response}")
 
         # Retrieve relevant documents based on the original query
-        retriever = self.pipeline.retriever
+        retriever = self.retriever
         retrieved_docs = retriever.invoke(gpt_question_response)
 
         # Combine the retrieved documents into a single context
