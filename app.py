@@ -1,23 +1,20 @@
+# backend.py
+from flask import Flask, request, jsonify
 from src.customer_assistance_Agent import CustomerAssistanceAgent
 
-if __name__ == '__main__':
-    # Define CustomerAssistanceAgent instance
-    agent = CustomerAssistanceAgent()
+app = Flask(__name__)
 
-    while True:
-        # Get user input
-        user_input = input("You: ")
+agent = CustomerAssistanceAgent()
 
-        # Check if the user wants to exit the chat
-        if user_input.lower() == "exit":
-            print("Exiting chat...")
-            break  # Exit the loop to end the conversation
-
-        # Get answer from pipeline
+@app.route('/query', methods=['POST'])
+def query():
+    data = request.json
+    user_input = data.get("user_input")
+    
+    if user_input:
         response = agent.query_with_prefix(user_input)
+        return jsonify({"response": response})
+    return jsonify({"response": "Invalid input"}), 400
 
-        # # Get answer from pipeline
-        # answer = agent.query_with_prefix(question)
-
-        # # Format & print output answer
-        # print(agent.prompt.format(question=question, answer=answer))
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
