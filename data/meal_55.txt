@@ -1,0 +1,9 @@
+Keywords: Freshly squeezed orange juice
+Parent Categories: Juices, Beverages, Fruits
+    Fresh Orange Juice
+        Description: Freshly squeezed orange juice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 120 kcal
+        Carbohydrates: 30g
+        Proteins: 2g
+        Fats: 0g

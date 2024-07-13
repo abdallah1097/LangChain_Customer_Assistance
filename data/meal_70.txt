@@ -1,0 +1,9 @@
+Keywords: Sparkling mineral water
+Parent Categories: Beverages, Water
+    Mineral Water
+        Description: Sparkling mineral water.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 0 kcal
+        Carbohydrates: 0g
+        Proteins: 0g
+        Fats: 0g

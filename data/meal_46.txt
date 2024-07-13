@@ -1,0 +1,9 @@
+Keywords: Pistachio ice cream
+Parent Categories: Desserts, Dairy, Nuts
+    Pistachio Ice Cream
+        Description: Creamy ice cream with the rich flavor of pistachios.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 30g
+        Proteins: 5g
+        Fats: 18g

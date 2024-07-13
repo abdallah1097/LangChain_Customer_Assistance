@@ -1,0 +1,9 @@
+Keywords: Chocolate chip cookies
+Parent Categories: Cookies, Desserts
+    Chocolate Chip Cookies
+        Description: Warm, freshly baked chocolate chip cookies.
+        Dietary Options: Vegetarian
+        Calories: 250 kcal
+        Carbohydrates: 35g
+        Proteins: 3g
+        Fats: 12g

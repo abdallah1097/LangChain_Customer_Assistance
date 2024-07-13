@@ -1,0 +1,9 @@
+Keywords: Spinach, Kale, Apple, Banana
+Parent Categories: Smoothies, Beverages, Fruits, Vegetables
+    Green Smoothie
+        Description: A blend of spinach, kale, apple, and banana.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 180 kcal
+        Carbohydrates: 35g
+        Proteins: 3g
+        Fats: 2g

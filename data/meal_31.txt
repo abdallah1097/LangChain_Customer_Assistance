@@ -1,0 +1,9 @@
+Keywords: Chocolate cake, Molten center, Vanilla ice cream
+Parent Categories: Cakes, Desserts, Dairy
+    Chocolate Lava Cake
+        Description: Rich chocolate cake with a gooey molten center, served with vanilla ice cream.
+        Dietary Options: Vegetarian
+        Calories: 450 kcal
+        Carbohydrates: 60g
+        Proteins: 5g
+        Fats: 20g

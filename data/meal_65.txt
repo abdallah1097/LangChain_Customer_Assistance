@@ -1,0 +1,9 @@
+Keywords: Hot chocolate, Real cocoa
+Parent Categories: Beverages, Dairy, Sweets
+    Hot Chocolate
+        Description: Rich hot chocolate made with real cocoa.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 200 kcal
+        Carbohydrates: 30g
+        Proteins: 6g
+        Fats: 8g

@@ -1,0 +1,9 @@
+Keywords: BBQ sauce, Grilled chicken, Red onions, Cilantro
+Parent Categories: Condiments, Poultry, Vegetables, Herbs
+    BBQ Chicken Pizza
+        Description: Pizza topped with BBQ sauce, grilled chicken, red onions, and cilantro.
+        Dietary Options: Gluten-Free (with GF crust)
+        Calories: 750 kcal
+        Carbohydrates: 75g
+        Proteins: 35g
+        Fats: 30g

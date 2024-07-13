@@ -1,0 +1,9 @@
+# Requirments for the app
+langchain==0.2.6
+langchain_community
+huggingface_hub==0.23.4
+sentence_transformers==3.0.1
+faiss-cpu==1.8.0.post1
+fastapi==0.111.0
+Streamlit==1.36.0
+Flask==3.0.3

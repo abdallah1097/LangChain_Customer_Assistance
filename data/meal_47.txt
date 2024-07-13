@@ -1,0 +1,9 @@
+Keywords: Filo pastry, Nuts, Honey syrup
+Parent Categories: Pastries, Desserts, Nuts, Sweeteners
+    Baklava
+        Description: Layers of filo pastry filled with nuts and honey syrup.
+        Dietary Options: Vegetarian
+        Calories: 400 kcal
+        Carbohydrates: 60g
+        Proteins: 6g
+        Fats: 20g

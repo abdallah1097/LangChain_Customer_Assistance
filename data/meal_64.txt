@@ -1,0 +1,9 @@
+Keywords: Chilled black tea, Ice
+Parent Categories: Teas, Beverages
+    Iced Tea
+        Description: Chilled black tea served over ice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 0 kcal
+        Carbohydrates: 0g
+        Proteins: 0g
+        Fats: 0g

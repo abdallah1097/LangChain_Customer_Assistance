@@ -1,0 +1,9 @@
+Keywords: Carrot cake, Cream cheese frosting
+Parent Categories: Cakes, Desserts, Dairy
+    Carrot Cake
+        Description: Moist carrot cake with cream cheese frosting.
+        Dietary Options: Vegetarian
+        Calories: 450 kcal
+        Carbohydrates: 60g
+        Proteins: 6g
+        Fats: 20g

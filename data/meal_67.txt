@@ -1,0 +1,9 @@
+Keywords: Latte, Almond milk
+Parent Categories: Beverages, Dairy
+    Almond Milk Latte
+        Description: Latte made with almond milk.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 80 kcal
+        Carbohydrates: 10g
+        Proteins: 2g
+        Fats: 4g

@@ -1,0 +1,9 @@
+Keywords: Mixed berries, Banana, Orange juice
+Parent Categories: Smoothies, Beverages, Fruits
+    Fruit Smoothie
+        Description: A blend of mixed berries, banana, and orange juice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 150 kcal
+        Carbohydrates: 35g
+        Proteins: 2g
+        Fats: 1g

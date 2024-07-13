@@ -1,0 +1,9 @@
+Keywords: Banana, Ice cream, Whipped cream, Chocolate sauce
+Parent Categories: Fruits, Desserts, Dairy
+    Banana Split
+        Description: Classic dessert with a split banana, three scoops of ice cream, whipped cream, and chocolate sauce.
+        Dietary Options: Vegetarian
+        Calories: 600 kcal
+        Carbohydrates: 90g
+        Proteins: 10g
+        Fats: 25g

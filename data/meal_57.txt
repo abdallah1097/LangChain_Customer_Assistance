@@ -1,0 +1,9 @@
+Keywords: Smoothie bowl, Granola, Fruits, Nuts
+Parent Categories: Smoothies, Beverages, Fruits, Nuts
+    Smoothie Bowl
+        Description: A thick smoothie served in a bowl and topped with granola, fruits, and nuts.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 50g
+        Proteins: 6g
+        Fats: 10g

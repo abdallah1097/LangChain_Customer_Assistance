@@ -1,0 +1,9 @@
+Keywords: Beef patty, Cheddar cheese, Lettuce, Tomato, Sesame bun, Special sauce
+Parent Categories: Meat, Dairy, Vegetables, Grains, Condiments
+    Classic Cheeseburger
+        Description: Juicy beef patty with cheddar cheese, lettuce, tomato, and special sauce on a sesame bun.
+        Dietary Options: Keto (without bun)
+        Calories: 800 kcal
+        Carbohydrates: 50g
+        Proteins: 40g
+        Fats: 45g

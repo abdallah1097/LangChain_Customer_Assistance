@@ -1,0 +1,9 @@
+Keywords: Spiced tea, Black tea, Cinnamon, Cardamom, Cloves
+Parent Categories: Teas, Beverages, Spices
+    Chai Tea
+        Description: Spiced tea with a blend of black tea, cinnamon, cardamom, and cloves.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 40 kcal
+        Carbohydrates: 10g
+        Proteins: 0g
+        Fats: 0g

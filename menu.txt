@@ -1,0 +1,700 @@
+$$
+Keywords: Mixed greens, Cherry tomatoes, Cucumbers, Vinaigrette dressing
+Parent Categories: Vegetables
+    Garden Salad
+        Description: Fresh mixed greens, cherry tomatoes, cucumbers, and a light vinaigrette dressing.
+        Dietary Options: Vegetarian, Vegan, Gluten-Free
+        Calories: 150 kcal
+        Carbohydrates: 10g
+        Proteins: 3g
+        Fats: 10g
+$$
+Keywords: Grilled chicken breast, Romaine lettuce, Croutons, Caesar dressing
+Parent Categories: Poultry, Vegetables
+    Chicken Caesar Salad
+        Description: Grilled chicken breast, romaine lettuce, croutons, and Caesar dressing.
+        Dietary Options: Gluten-Free (without croutons)
+        Calories: 350 kcal
+        Carbohydrates: 12g
+        Proteins: 30g
+        Fats: 20g
+$$
+Keywords: Tomato, Basil, Garlic bread
+Parent Categories: Vegetables, Herbs
+    Tomato Basil Soup
+        Description: Creamy tomato soup with fresh basil, served with a side of garlic bread.
+        Dietary Options: Vegetarian
+        Calories: 200 kcal
+        Carbohydrates: 25g
+        Proteins: 5g
+        Fats: 10g
+$$
+Keywords: Mushrooms, Cheese, Herbs
+Parent Categories: Vegetables, Dairy, Herbs
+    Stuffed Mushrooms
+        Description: Mushrooms stuffed with a savory cheese and herb filling.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 250 kcal
+        Carbohydrates: 15g
+        Proteins: 8g
+        Fats: 18g
+$$
+Keywords: Shrimp, Cocktail sauce
+Parent Categories: Seafood
+    Shrimp Cocktail
+        Description: Fresh shrimp served with a tangy cocktail sauce.
+        Dietary Options: Gluten-Free, Keto
+        Calories: 120 kcal
+        Carbohydrates: 5g
+        Proteins: 15g
+        Fats: 2g
+$$
+Keywords: Avocado, Whole grain bread, Cherry tomatoes, Chili flakes
+Parent Categories: Fruits, Grains, Vegetables, Spices
+    Avocado Toast
+        Description: Toasted whole grain bread topped with smashed avocado, cherry tomatoes, and a sprinkle of chili flakes.
+        Dietary Options: Vegetarian, Vegan (without butter)
+        Calories: 300 kcal
+        Carbohydrates: 40g
+        Proteins: 6g
+        Fats: 15g
+$$
+Keywords: Cherry tomatoes, Mozzarella balls, Basil, Balsamic glaze
+Parent Categories: Vegetables, Dairy, Herbs, Condiments
+    Caprese Skewers
+        Description: Cherry tomatoes, mozzarella balls, and fresh basil drizzled with balsamic glaze.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 180 kcal
+        Carbohydrates: 8g
+        Proteins: 10g
+        Fats: 12g
+$$
+Keywords: Baguette, Tomatoes, Garlic, Basil
+Parent Categories: Grains, Vegetables, Herbs
+    Bruschetta
+        Description: Toasted baguette slices topped with a mix of tomatoes, garlic, and basil.
+        Dietary Options: Vegetarian, Vegan
+        Calories: 220 kcal
+        Carbohydrates: 35g
+        Proteins: 5g
+        Fats: 8g
+$$
+Keywords: Hummus, Pita bread, Assorted vegetables
+Parent Categories: Legumes, Grains, Vegetables
+    Hummus Plate
+        Description: Creamy hummus served with pita bread and assorted vegetables.
+        Dietary Options: Vegetarian, Vegan
+        Calories: 300 kcal
+        Carbohydrates: 45g
+        Proteins: 10g
+        Fats: 12g
+$$
+Keywords: Spinach, Artichoke, Cheese, Tortilla chips
+Parent Categories: Vegetables, Dairy, Grains
+    Spinach Artichoke Dip
+        Description: Warm, cheesy dip served with tortilla chips.
+        Dietary Options: Vegetarian, Gluten-Free (with GF chips)
+        Calories: 350 kcal
+        Carbohydrates: 20g
+        Proteins: 12g
+        Fats: 25g
+$$
+Keywords: Salmon, Quinoa, Steamed vegetables
+Parent Categories: Seafood, Grains, Vegetables
+    Grilled Salmon
+        Description: Freshly grilled salmon served with quinoa and steamed vegetables.
+        Dietary Options: Gluten-Free, Keto, Paleo, Low-Carb
+        Calories: 500 kcal
+        Carbohydrates: 20g
+        Proteins: 40g
+        Fats: 25g
+$$
+Keywords: Brown rice, Chickpeas, Avocado, Roasted vegetables, Tahini sauce
+Parent Categories: Grains, Legumes, Fruits, Vegetables, Condiments
+    Vegan Buddha Bowl
+        Description: A nutritious bowl of brown rice, chickpeas, avocado, roasted vegetables, and tahini sauce.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 600 kcal
+        Carbohydrates: 70g
+        Proteins: 20g
+        Fats: 20g
+$$
+Keywords: Beef patty, Cheddar cheese, Lettuce, Tomato, Sesame bun, Special sauce
+Parent Categories: Meat, Dairy, Vegetables, Grains, Condiments
+    Classic Cheeseburger
+        Description: Juicy beef patty with cheddar cheese, lettuce, tomato, and special sauce on a sesame bun.
+        Dietary Options: Keto (without bun)
+        Calories: 800 kcal
+        Carbohydrates: 50g
+        Proteins: 40g
+        Fats: 45g
+$$
+Keywords: Fettuccine pasta, Alfredo sauce, Grilled chicken
+Parent Categories: Grains, Dairy, Poultry
+    Chicken Alfredo
+        Description: Fettuccine pasta in a creamy Alfredo sauce with grilled chicken.
+        Dietary Options: Gluten-Free (with GF pasta)
+        Calories: 750 kcal
+        Carbohydrates: 60g
+        Proteins: 40g
+        Fats: 35g
+$$
+Keywords: Fresh vegetables, Tofu, Savory sauce, Brown rice
+Parent Categories: Vegetables, Legumes, Condiments, Grains
+    Veggie Stir Fry
+        Description: A mix of fresh vegetables stir-fried with tofu and a savory sauce, served over brown rice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 450 kcal
+        Carbohydrates: 65g
+        Proteins: 20g
+        Fats: 15g
+$$
+Keywords: Soft corn tortillas, Seasoned beef, Lettuce, Cheese, Salsa
+Parent Categories: Grains, Meat, Vegetables, Dairy, Condiments
+    Beef Tacos
+        Description: Three soft corn tortillas filled with seasoned beef, lettuce, cheese, and salsa.
+        Dietary Options: Gluten-Free
+        Calories: 550 kcal
+        Carbohydrates: 45g
+        Proteins: 30g
+        Fats: 25g
+$$
+Keywords: Tomatoes, Mozzarella, Basil
+Parent Categories: Vegetables, Dairy, Herbs
+    Margherita Pizza
+        Description: Classic pizza topped with fresh tomatoes, mozzarella, and basil.
+        Dietary Options: Vegetarian
+        Calories: 700 kcal
+        Carbohydrates: 80g
+        Proteins: 25g
+        Fats: 30g
+$$
+Keywords: BBQ sauce, Grilled chicken, Red onions, Cilantro
+Parent Categories: Condiments, Poultry, Vegetables, Herbs
+    BBQ Chicken Pizza
+        Description: Pizza topped with BBQ sauce, grilled chicken, red onions, and cilantro.
+        Dietary Options: Gluten-Free (with GF crust)
+        Calories: 750 kcal
+        Carbohydrates: 75g
+        Proteins: 35g
+        Fats: 30g
+$$
+Keywords: Spaghetti pasta, Meat sauce, Ground beef, Tomatoes
+Parent Categories: Grains, Meat, Vegetables
+    Spaghetti Bolognese
+        Description: Spaghetti pasta with a rich meat sauce made from ground beef and tomatoes.
+        Dietary Options: Gluten-Free (with GF pasta)
+        Calories: 600 kcal
+        Carbohydrates: 70g
+        Proteins: 30g
+        Fats: 20g
+$$
+Keywords: Eggplant, Breaded, Marinara sauce, Cheese
+Parent Categories: Vegetables, Grains, Condiments, Dairy
+    Eggplant Parmesan
+        Description: Breaded and baked eggplant slices topped with marinara sauce and melted cheese.
+        Dietary Options: Vegetarian
+        Calories: 500 kcal
+        Carbohydrates: 45g
+        Proteins: 20g
+        Fats: 25g
+$$
+Keywords: Chicken breast, Steamed broccoli, Mashed potatoes
+Parent Categories: Poultry, Vegetables, Grains
+    Grilled Chicken Breast
+        Description: Juicy grilled chicken breast served with a side of steamed broccoli and mashed potatoes.
+        Dietary Options: Gluten-Free, Keto, Paleo
+        Calories: 400 kcal
+        Carbohydrates: 30g
+        Proteins: 35g
+        Fats: 15g
+$$
+Keywords: Beef strips, Mushroom sauce, Egg noodles
+Parent Categories: Meat, Vegetables, Dairy, Grains
+    Beef Stroganoff
+        Description: Tender beef strips cooked in a creamy mushroom sauce, served over egg noodles.
+        Dietary Options: Gluten-Free (with GF noodles)
+        Calories: 700 kcal
+        Carbohydrates: 50g
+        Proteins: 40g
+        Fats: 35g
+$$
+Keywords: Veggie patty, Whole wheat bun, Lettuce, Tomato, Avocado
+Parent Categories: Grains, Vegetables, Fruits
+    Veggie Burger
+        Description: A hearty veggie patty served on a whole wheat bun with lettuce, tomato, and avocado.
+        Dietary Options: Vegetarian, Vegan (without mayo)
+        Calories: 450 kcal
+        Carbohydrates: 60g
+        Proteins: 20g
+        Fats: 15g
+$$
+Keywords: Shrimp, Garlic butter, White wine sauce, Linguine
+Parent Categories: Seafood, Dairy, Beverages, Grains
+    Shrimp Scampi
+        Description: Succulent shrimp sautéed in garlic butter and white wine sauce, served over linguine.
+        Dietary Options: Gluten-Free (with GF pasta)
+        Calories: 600 kcal
+        Carbohydrates: 55g
+        Proteins: 30g
+        Fats: 25g
+$$
+Keywords: Chicken strips, Bell peppers, Onions, Tortillas, Guacamole
+Parent Categories: Poultry, Vegetables, Grains, Condiments
+    Chicken Fajitas
+        Description: Sizzling chicken strips with bell peppers and onions, served with tortillas and guacamole.
+        Dietary Options: Gluten-Free (with GF tortillas)
+        Calories: 500 kcal
+        Carbohydrates: 45g
+        Proteins: 35g
+        Fats: 20g
+$$
+Keywords: Seasoned beef, Rice, Black beans, Corn, Cheese, Sour cream, Salsa
+Parent Categories: Meat, Grains, Legumes, Vegetables, Dairy, Condiments
+    Beef Burrito Bowl
+        Description: A bowl of seasoned beef, rice, black beans, corn, and cheese, topped with sour cream and salsa.
+        Dietary Options: Gluten-Free
+        Calories: 700 kcal
+        Carbohydrates: 70g
+        Proteins: 40g
+        Fats: 30g
+$$
+Keywords: Grilled fish, Cabbage slaw, Lime crema, Corn tortillas
+Parent Categories: Seafood, Vegetables, Condiments, Grains
+    Fish Tacos
+        Description: Soft corn tortillas filled with grilled fish, cabbage slaw, and lime crema.
+        Dietary Options: Gluten-Free
+        Calories: 450 kcal
+        Carbohydrates: 35g
+        Proteins: 25g
+        Fats: 20g
+$$
+Keywords: Lamb chops, Roasted potatoes, Green beans
+Parent Categories: Meat, Grains, Vegetables
+    Lamb Chops
+        Description: Grilled lamb chops served with roasted potatoes and green beans.
+        Dietary Options: Gluten-Free, Keto, Paleo
+        Calories: 600 kcal
+        Carbohydrates: 20g
+        Proteins: 50g
+        Fats: 35g
+$$
+Keywords: Stewed vegetables
+Parent Categories: Vegetables
+    Ratatouille
+        Description: A traditional French dish of stewed vegetables.
+        Dietary Options: Vegetarian, Vegan, Gluten-Free
+        Calories: 250 kcal
+        Carbohydrates: 30g
+        Proteins: 5g
+        Fats: 10g
+$$
+Keywords: Breaded chicken breast, Marinara sauce, Mozzarella cheese, Spaghetti
+Parent Categories: Poultry, Grains, Dairy, Condiments
+    Chicken Parmesan
+        Description: Breaded chicken breast topped with marinara sauce and mozzarella cheese, served with spaghetti.
+        Dietary Options: Gluten-Free (with GF breading and pasta)
+        Calories: 750 kcal
+        Carbohydrates: 60g
+        Proteins: 45g
+        Fats: 30g
+$$
+Keywords: Chocolate cake, Molten center, Vanilla ice cream
+Parent Categories: Cakes, Desserts, Dairy
+    Chocolate Lava Cake
+        Description: Rich chocolate cake with a gooey molten center, served with vanilla ice cream.
+        Dietary Options: Vegetarian
+        Calories: 450 kcal
+        Carbohydrates: 60g
+        Proteins: 5g
+        Fats: 20g
+$$
+Keywords: Seasonal fruits
+Parent Categories: Fruits, Desserts
+    Fresh Fruit Platter
+        Description: A selection of seasonal fruits.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 200 kcal
+        Carbohydrates: 50g
+        Proteins: 2g
+        Fats: 1g
+$$
+Keywords: Coffee-soaked ladyfingers, Mascarpone cheese
+Parent Categories: Cakes, Desserts, Dairy
+    Tiramisu
+        Description: Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cheese.
+        Dietary Options: Vegetarian
+        Calories: 500 kcal
+        Carbohydrates: 55g
+        Proteins: 7g
+        Fats: 25g
+$$
+Keywords: Cheesecake, Graham cracker crust, Fresh berries
+Parent Categories: Cakes, Desserts, Dairy
+    Cheesecake
+        Description: Creamy cheesecake with a graham cracker crust, topped with fresh berries.
+        Dietary Options: Vegetarian
+        Calories: 600 kcal
+        Carbohydrates: 45g
+        Proteins: 10g
+        Fats: 40g
+$$
+Keywords: Apple pie, Flaky crust, Vanilla ice cream
+Parent Categories: Pies, Desserts, Dairy
+    Apple Pie
+        Description: Classic apple pie with a flaky crust, served with a scoop of vanilla ice cream.
+        Dietary Options: Vegetarian
+        Calories: 450 kcal
+        Carbohydrates: 70g
+        Proteins: 5g
+        Fats: 20g
+$$
+Keywords: Chocolate mousse, Avocado, Cocoa
+Parent Categories: Desserts, Fruits
+    Vegan Chocolate Mousse
+        Description: Rich and creamy chocolate mousse made with avocado and cocoa.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 35g
+        Proteins: 5g
+        Fats: 18g
+$$
+Keywords: Lemon tart, Buttery crust
+Parent Categories: Tarts, Desserts, Dairy
+    Lemon Tart
+        Description: Tangy lemon tart with a buttery crust.
+        Dietary Options: Vegetarian
+        Calories: 350 kcal
+        Carbohydrates: 50g
+        Proteins: 4g
+        Fats: 15g
+$$
+Keywords: Coconut, Chocolate drizzle
+Parent Categories: Cookies, Desserts, Dairy
+    Coconut Macaroons
+        Description: Chewy coconut cookies, drizzled with chocolate.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 200 kcal
+        Carbohydrates: 30g
+        Proteins: 3g
+        Fats: 10g
+$$
+Keywords: Panna cotta, Berry compote
+Parent Categories: Desserts, Dairy, Fruits
+    Panna Cotta
+        Description: Creamy Italian dessert with a hint of vanilla, topped with a berry compote.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 25g
+        Proteins: 5g
+        Fats: 18g
+$$
+Keywords: Brownie, Vanilla ice cream, Whipped cream, Chocolate sauce
+Parent Categories: Cakes, Desserts, Dairy
+    Brownie Sundae
+        Description: Fudgy brownie topped with vanilla ice cream, whipped cream, and chocolate sauce.
+        Dietary Options: Vegetarian
+        Calories: 550 kcal
+        Carbohydrates: 70g
+        Proteins: 7g
+        Fats: 25g
+$$
+Keywords: Rice pudding, Cinnamon, Vanilla
+Parent Categories: Desserts, Grains, Dairy
+    Rice Pudding
+        Description: Creamy rice pudding with a hint of cinnamon and vanilla.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 250 kcal
+        Carbohydrates: 50g
+        Proteins: 6g
+        Fats: 5g
+$$
+Keywords: Carrot cake, Cream cheese frosting
+Parent Categories: Cakes, Desserts, Dairy
+    Carrot Cake
+        Description: Moist carrot cake with cream cheese frosting.
+        Dietary Options: Vegetarian
+        Calories: 450 kcal
+        Carbohydrates: 60g
+        Proteins: 6g
+        Fats: 20g
+$$
+Keywords: Mango sorbet, Ripe mangoes
+Parent Categories: Desserts, Fruits
+    Mango Sorbet
+        Description: Refreshing mango sorbet made with ripe mangoes.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 150 kcal
+        Carbohydrates: 35g
+        Proteins: 1g
+        Fats: 0g
+$$
+Keywords: Choux pastry, Cream, Chocolate sauce
+Parent Categories: Pastries, Desserts, Dairy
+    Profiteroles
+        Description: Light choux pastry filled with cream and topped with chocolate sauce.
+        Dietary Options: Vegetarian
+        Calories: 300 kcal
+        Carbohydrates: 40g
+        Proteins: 6g
+        Fats: 15g
+$$
+Keywords: Pear tart, Almond cream, Sliced pears
+Parent Categories: Tarts, Desserts, Nuts, Fruits
+    Pear Tart
+        Description: Delicate tart filled with almond cream and topped with sliced pears.
+        Dietary Options: Vegetarian
+        Calories: 350 kcal
+        Carbohydrates: 45g
+        Proteins: 5g
+        Fats: 15g
+$$
+Keywords: Pistachio ice cream
+Parent Categories: Desserts, Dairy, Nuts
+    Pistachio Ice Cream
+        Description: Creamy ice cream with the rich flavor of pistachios.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 30g
+        Proteins: 5g
+        Fats: 18g
+$$
+Keywords: Filo pastry, Nuts, Honey syrup
+Parent Categories: Pastries, Desserts, Nuts, Sweeteners
+    Baklava
+        Description: Layers of filo pastry filled with nuts and honey syrup.
+        Dietary Options: Vegetarian
+        Calories: 400 kcal
+        Carbohydrates: 60g
+        Proteins: 6g
+        Fats: 20g
+$$
+Keywords: Banana, Ice cream, Whipped cream, Chocolate sauce
+Parent Categories: Fruits, Desserts, Dairy
+    Banana Split
+        Description: Classic dessert with a split banana, three scoops of ice cream, whipped cream, and chocolate sauce.
+        Dietary Options: Vegetarian
+        Calories: 600 kcal
+        Carbohydrates: 90g
+        Proteins: 10g
+        Fats: 25g
+$$
+Keywords: Chocolate chip cookies
+Parent Categories: Cookies, Desserts
+    Chocolate Chip Cookies
+        Description: Warm, freshly baked chocolate chip cookies.
+        Dietary Options: Vegetarian
+        Calories: 250 kcal
+        Carbohydrates: 35g
+        Proteins: 3g
+        Fats: 12g
+$$
+Keywords: Sponge cake, Whipped cream, Fresh strawberries
+Parent Categories: Cakes, Desserts, Dairy, Fruits
+    Strawberry Shortcake
+        Description: Light sponge cake layered with whipped cream and fresh strawberries.
+        Dietary Options: Vegetarian
+        Calories: 350 kcal
+        Carbohydrates: 50g
+        Proteins: 5g
+        Fats: 15g
+$$
+Keywords: Spinach, Kale, Apple, Banana
+Parent Categories: Smoothies, Beverages, Fruits, Vegetables
+    Green Smoothie
+        Description: A blend of spinach, kale, apple, and banana.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 180 kcal
+        Carbohydrates: 35g
+        Proteins: 3g
+        Fats: 2g
+$$
+Keywords: Espresso, Aromatic
+Parent Categories: Coffee, Beverages
+    Espresso
+        Description: Rich and aromatic espresso shot.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 5 kcal
+        Carbohydrates: 1g
+        Proteins: 0g
+        Fats: 0g
+$$
+Keywords: Espresso, Steamed milk, Frothy top
+Parent Categories: Coffee, Beverages, Dairy
+    Cappuccino
+        Description: Espresso with steamed milk and a frothy top.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 100 kcal
+        Carbohydrates: 12g
+        Proteins: 5g
+        Fats: 4g
+$$
+Keywords: Herbal teas, Chamomile, Mint, Rooibos
+Parent Categories: Teas, Beverages, Herbal
+    Herbal Tea
+        Description: A selection of herbal teas including chamomile, mint, and rooibos.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 0 kcal
+        Carbohydrates: 0g
+        Proteins: 0g
+        Fats: 0g
+$$
+Keywords: Freshly squeezed orange juice
+Parent Categories: Juices, Beverages, Fruits
+    Fresh Orange Juice
+        Description: Freshly squeezed orange juice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 120 kcal
+        Carbohydrates: 30g
+        Proteins: 2g
+        Fats: 0g
+$$
+Keywords: Chilled coffee, Ice
+Parent Categories: Coffee, Beverages
+    Iced Coffee
+        Description: Chilled coffee served over ice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 50 kcal
+        Carbohydrates: 12g
+        Proteins: 1g
+        Fats: 0g
+$$
+Keywords: Smoothie bowl, Granola, Fruits, Nuts
+Parent Categories: Smoothies, Beverages, Fruits, Nuts
+    Smoothie Bowl
+        Description: A thick smoothie served in a bowl and topped with granola, fruits, and nuts.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 50g
+        Proteins: 6g
+        Fats: 10g
+$$
+Keywords: Matcha green tea, Latte
+Parent Categories: Teas, Beverages, Dairy
+    Matcha Latte
+        Description: Creamy latte made with matcha green tea.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 100 kcal
+        Carbohydrates: 15g
+        Proteins: 4g
+        Fats: 3g
+$$
+Keywords: Lemonade, Freshly squeezed lemons
+Parent Categories: Juices, Beverages, Fruits
+    Lemonade
+        Description: Refreshing lemonade made with freshly squeezed lemons.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 90 kcal
+        Carbohydrates: 25g
+        Proteins: 0g
+        Fats: 0g
+$$
+Keywords: Spiced tea, Black tea, Cinnamon, Cardamom, Cloves
+Parent Categories: Teas, Beverages, Spices
+    Chai Tea
+        Description: Spiced tea with a blend of black tea, cinnamon, cardamom, and cloves.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 40 kcal
+        Carbohydrates: 10g
+        Proteins: 0g
+        Fats: 0g
+$$
+Keywords: Protein powder, Almond milk, Banana
+Parent Categories: Smoothies, Beverages, Dairy
+    Protein Shake
+        Description: A shake made with protein powder, almond milk, and a banana.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 200 kcal
+        Carbohydrates: 30g
+        Proteins: 15g
+        Fats: 5g
+$$
+Keywords: Espresso, Chocolate syrup, Steamed milk
+Parent Categories: Coffee, Beverages, Dairy
+    Mocha
+        Description: Espresso mixed with chocolate syrup and steamed milk.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 250 kcal
+        Carbohydrates: 40g
+        Proteins: 8g
+        Fats: 7g
+$$
+Keywords: Mixed berries, Banana, Orange juice
+Parent Categories: Smoothies, Beverages, Fruits
+    Fruit Smoothie
+        Description: A blend of mixed berries, banana, and orange juice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 150 kcal
+        Carbohydrates: 35g
+        Proteins: 2g
+        Fats: 1g
+$$
+Keywords: Chilled black tea, Ice
+Parent Categories: Teas, Beverages
+    Iced Tea
+        Description: Chilled black tea served over ice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 0 kcal
+        Carbohydrates: 0g
+        Proteins: 0g
+        Fats: 0g
+$$
+Keywords: Hot chocolate, Real cocoa
+Parent Categories: Beverages, Dairy, Sweets
+    Hot Chocolate
+        Description: Rich hot chocolate made with real cocoa.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 200 kcal
+        Carbohydrates: 30g
+        Proteins: 6g
+        Fats: 8g
+$$
+Keywords: Coconut water
+Parent Categories: Beverages, Fruits
+    Coconut Water
+        Description: Refreshing coconut water.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 60 kcal
+        Carbohydrates: 15g
+        Proteins: 0g
+        Fats: 0g
+$$
+Keywords: Latte, Almond milk
+Parent Categories: Beverages, Dairy
+    Almond Milk Latte
+        Description: Latte made with almond milk.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 80 kcal
+        Carbohydrates: 10g
+        Proteins: 2g
+        Fats: 4g
+$$
+Keywords: Detox juice, Cucumber, Celery, Green apple, Lemon juice
+Parent Categories: Juices, Beverages, Fruits, Vegetables
+    Detox Juice
+        Description: A blend of cucumber, celery, green apple, and lemon juice.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 70 kcal
+        Carbohydrates: 15g
+        Proteins: 1g
+        Fats: 0g
+$$
+Keywords: Milkshake, Chocolate, Vanilla, Strawberry
+Parent Categories: Beverages, Dairy, Sweets
+    Milkshake
+        Description: Thick and creamy milkshake available in chocolate, vanilla, and strawberry.
+        Dietary Options: Vegetarian, Gluten-Free
+        Calories: 300 kcal
+        Carbohydrates: 45g
+        Proteins: 8g
+        Fats: 10g
+$$
+Keywords: Sparkling mineral water
+Parent Categories: Beverages, Water
+    Mineral Water
+        Description: Sparkling mineral water.
+        Dietary Options: Vegan, Gluten-Free
+        Calories: 0 kcal
+        Carbohydrates: 0g
+        Proteins: 0g
+        Fats: 0g

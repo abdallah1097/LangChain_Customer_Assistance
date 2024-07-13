@@ -1,0 +1,9 @@
+Keywords: Fettuccine pasta, Alfredo sauce, Grilled chicken
+Parent Categories: Grains, Dairy, Poultry
+    Chicken Alfredo
+        Description: Fettuccine pasta in a creamy Alfredo sauce with grilled chicken.
+        Dietary Options: Gluten-Free (with GF pasta)
+        Calories: 750 kcal
+        Carbohydrates: 60g
+        Proteins: 40g
+        Fats: 35g

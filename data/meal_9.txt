@@ -1,0 +1,9 @@
+Keywords: Hummus, Pita bread, Assorted vegetables
+Parent Categories: Legumes, Grains, Vegetables
+    Hummus Plate
+        Description: Creamy hummus served with pita bread and assorted vegetables.
+        Dietary Options: Vegetarian, Vegan
+        Calories: 300 kcal
+        Carbohydrates: 45g
+        Proteins: 10g
+        Fats: 12g

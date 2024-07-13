@@ -1,0 +1,9 @@
+Keywords: Tomatoes, Mozzarella, Basil
+Parent Categories: Vegetables, Dairy, Herbs
+    Margherita Pizza
+        Description: Classic pizza topped with fresh tomatoes, mozzarella, and basil.
+        Dietary Options: Vegetarian
+        Calories: 700 kcal
+        Carbohydrates: 80g
+        Proteins: 25g
+        Fats: 30g
